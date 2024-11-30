@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    <script>
+
+        const bookData = {
+                            "Books":
+                            [
+                                {
+                                    "title":"The Great Gatsby",
+                                    "author":"F. Scott Fitzgerald",
+                                    "publicationYear":1925,
+                                    "genres":"Fiction, Classics"
+                                },
+                                {    
+                                    "title":"To Kill a Mockingbird",
+                                    "author":"Harper Lee",
+                                    "publicationYear":1960,
+                                    "genres":"Fiction, Coming-of-Age"
+                                }
+                            ]
+                        };
+
+        // Function to display book details
+        function displayBookDetails(){
+            // (a) Title of the first book
+            console.log("Title of the first book: ", bookData.Books[0].title);
+
+            // (b) Author of the second book
+            console.log("Author of the second book: ", bookData.Books[1].author);
+
+            // (c) Genres of all the books
+            console.log("Genres of all the book: ");
+            bookData.Books.forEach((book, index) => {
+                console.log(`Book ${index + 1} Genres:`, book.genres);
+            });
+        }
+
+        // Run the function when the page loads 
+        window.onload = displayBookDetails;
+
+    </script>
+</body>
+</html>
